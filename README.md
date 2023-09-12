@@ -1,19 +1,18 @@
-- [[org-cv](https://github.com/haoxiangliew/org-cv)](#org7f7ddbe)
-  - [Changes](#orga7dabfb)
-  - [Installation](#org0adafae)
-  - [Usage](#org9295a65)
-    - [Configuration](#org9ac2699)
+- [[org-cv](https://github.com/haoxiangliew/org-cv)](#org301a60e)
+  - [Changes](#org4ba66d6)
+  - [Installation](#orgccf950a)
+  - [Usage](#org9530cf9)
 
 
 
-<a id="org7f7ddbe"></a>
+<a id="org301a60e"></a>
 
 # [org-cv](https://github.com/haoxiangliew/org-cv)
 
 -   Follows upstream at <https://gitlab.com/Titan-C/org-cv>
 
 
-<a id="orga7dabfb"></a>
+<a id="org4ba66d6"></a>
 
 ## Changes
 
@@ -21,18 +20,18 @@
 -   Removed everything other than `ox-moderncv`
 
 
-<a id="org0adafae"></a>
+<a id="orgccf950a"></a>
 
 ## Installation
 
 ```emacs-lisp
 (use-package ox-moderncv
-  :elpaca (:repo "https://github.com/haoxiangliew/org-cv")
+  :elpaca (ox-moderncv :repo "https://github.com/haoxiangliew/org-cv")
   :requires ox-moderncv)
 ```
 
 
-<a id="org9295a65"></a>
+<a id="org9530cf9"></a>
 
 ## Usage
 
@@ -50,6 +49,11 @@
 | PHOTO    | Path to photo file                    |
 
 ```org
+# CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+#+CVSTYLE: banking
+# CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+#+CVCOLOR: green
+
 #+TITLE: My dream job
 #+AUTHOR: John Doe
 #+email: john@doe.lost
@@ -98,18 +102,4 @@ When exporting you can call the following to get the latex file, or use `C-c C-e
 ```emacs-lisp
 (org-export-to-file 'moderncv "moderncv.tex")
 (org-latex-compile "moderncv.tex")
-```
-
-
-<a id="org9ac2699"></a>
-
-### Configuration
-
-Configure `moderncv` by adding the following to the top of the `.org` file
-
-```org
-# CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-#+CVSTYLE: banking
-# CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-#+CVCOLOR: green
 ```

@@ -11,7 +11,7 @@
 ** Installation
 #+BEGIN_SRC emacs-lisp
   (use-package ox-moderncv
-    :elpaca (:repo "https://github.com/haoxiangliew/org-cv")
+    :elpaca (ox-moderncv :repo "https://github.com/haoxiangliew/org-cv")
     :requires ox-moderncv)
 #+END_SRC
 
@@ -30,6 +30,11 @@
 | PHOTO    | Path to photo file                    |
 
 #+BEGIN_SRC org
+  # CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+  ,#+CVSTYLE: banking
+  # CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+  ,#+CVCOLOR: green
+
   ,#+TITLE: My dream job
   ,#+AUTHOR: John Doe
   ,#+email: john@doe.lost
@@ -76,15 +81,6 @@
 When exporting you can call the following to get the latex file, or use ~C-c C-e~ / ~org-export-dispatch~
 
 #+BEGIN_SRC emacs-lisp
-(org-export-to-file 'moderncv "moderncv.tex")
-(org-latex-compile "moderncv.tex")
-#+END_SRC
-
-*** Configuration
-Configure ~moderncv~ by adding the following to the top of the ~.org~ file
-#+BEGIN_SRC org
-# CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-,#+CVSTYLE: banking
-# CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-,#+CVCOLOR: green
+  (org-export-to-file 'moderncv "moderncv.tex")
+  (org-latex-compile "moderncv.tex")
 #+END_SRC
