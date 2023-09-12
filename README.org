@@ -1,0 +1,89 @@
+#+TITLE: org-cv
+#+AUTHOR: Hao Xiang Liew
+
+* [[https://github.com/haoxiangliew/org-cv][org-cv]]
+- Follows upstream at [[https://gitlab.com/Titan-C/org-cv]]
+
+** Changes
+- Added entries for org-cv in ~org-export-dispatch~
+- Removed everything other than ~ox-moderncv~
+
+** Installation
+#+BEGIN_SRC emacs-lisp
+  (use-package ox-moderncv
+    :elpaca (:repo "https://github.com/haoxiangliew/org-cv")
+    :requires ox-moderncv)
+#+END_SRC
+
+** Usage
+| Field    | Description                           |
+|----------+---------------------------------------|
+| TITLE    | Desired Field                         |
+| AUTHOR   | Name                                  |
+| EMAIL    | Contact Email                         |
+| TITLE    | Address, can span over multiple lines |
+| HOMEPAGE | URL to website                        |
+| MOBILE   | Mobile phone #                        |
+| GITHUB   | GitHub User                           |
+| GITLAB   | GitLab User                           |
+| LINKEDIN | LinkedIn Username                     |
+| PHOTO    | Path to photo file                    |
+
+#+BEGIN_SRC org
+  ,#+TITLE: My dream job
+  ,#+AUTHOR: John Doe
+  ,#+email: john@doe.lost
+
+  ,#+ADDRESS: My Awesome crib
+  ,#+ADDRESS: Fantastic city -- Planet Earth
+  ,#+MOBILE: (+9) 87654321
+  ,#+HOMEPAGE: example.com
+  ,#+GITHUB: Titan-C
+  ,#+GITLAB: Titan-C
+  ,#+LINKEDIN: oscar-najera
+  ,#+PHOTO: smile.png
+
+  ,* Employement
+  ,** One job
+  :PROPERTIES:
+  :CV_ENV:   cventry
+  :FROM:     <2014-09-01>
+  :TO:       <2017-12-07>
+  :LOCATION: a city, a country
+  :EMPLOYER: The employer
+  :END:
+
+  I write about awesome stuff I do.
+  ,** Other job
+  :PROPERTIES:
+  :CV_ENV:   cventry
+  :FROM:     <2013-09-01>
+  :TO:       <2014-08-07>
+  :LOCATION: my city, your country
+  :EMPLOYER: The other employer
+  :END:
+
+  I write about awesome stuff I do.
+
+  ,* Other stuff I do
+  - I work a lot
+  - I sleep a lot
+  - I eat a lot
+#+END_SRC
+
+- [[https://github.com/haoxiangliew/org-cv/moderncv-demo.pdf]]
+
+When exporting you can call the following to get the latex file, or use ~C-c C-e~ / ~org-export-dispatch~
+
+#+BEGIN_SRC emacs-lisp
+(org-export-to-file 'moderncv "moderncv.tex")
+(org-latex-compile "moderncv.tex")
+#+END_SRC
+
+*** Configuration
+#+BEGIN_SRC org
+# CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+,#+CVSTYLE: banking
+# CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+,#+CVCOLOR: green
+#+END_SRC
