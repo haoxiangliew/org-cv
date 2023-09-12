@@ -1,19 +1,19 @@
-- [[org-cv](https://github.com/haoxiangliew/org-cv)](#orgf940530)
-  - [Changes](#org8290de5)
-  - [Installation](#orgc0eded0)
-  - [Usage](#org825c929)
-    - [Configuration](#org91ec977)
+- [[org-cv](https://github.com/haoxiangliew/org-cv)](#org7f259a7)
+  - [Changes](#org1a8fb54)
+  - [Installation](#org8359fbc)
+  - [Usage](#org74cf23a)
+    - [Configuration](#org52ad789)
 
 
 
-<a id="orgf940530"></a>
+<a id="org7f259a7"></a>
 
 # [org-cv](https://github.com/haoxiangliew/org-cv)
 
 -   Follows upstream at <https://gitlab.com/Titan-C/org-cv>
 
 
-<a id="org8290de5"></a>
+<a id="org1a8fb54"></a>
 
 ## Changes
 
@@ -21,7 +21,7 @@
 -   Removed everything other than `ox-moderncv`
 
 
-<a id="orgc0eded0"></a>
+<a id="org8359fbc"></a>
 
 ## Installation
 
@@ -32,7 +32,7 @@
 ```
 
 
-<a id="org825c929"></a>
+<a id="org74cf23a"></a>
 
 ## Usage
 
@@ -91,7 +91,7 @@ I write about awesome stuff I do.
 - I eat a lot
 ```
 
--   <https://github.com/haoxiangliew/org-cv/moderncv-demo.pdf>
+-   <https://github.com/haoxiangliew/org-cv/blob/master/moderncv-demo.pdf>
 
 When exporting you can call the following to get the latex file, or use `C-c C-e` / `org-export-dispatch`
 
@@ -101,7 +101,7 @@ When exporting you can call the following to get the latex file, or use `C-c C-e
 ```
 
 
-<a id="org91ec977"></a>
+<a id="org52ad789"></a>
 
 ### Configuration
 

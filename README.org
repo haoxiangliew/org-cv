@@ -71,7 +71,7 @@
   - I eat a lot
 #+END_SRC
 
-- [[https://github.com/haoxiangliew/org-cv/moderncv-demo.pdf]]
+- [[https://github.com/haoxiangliew/org-cv/blob/master/moderncv-demo.pdf]]
 
 When exporting you can call the following to get the latex file, or use ~C-c C-e~ / ~org-export-dispatch~
 
