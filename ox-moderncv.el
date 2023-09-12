@@ -69,7 +69,7 @@
   :translate-alist '((template . org-moderncv-template)
                      (headline . org-moderncv-headline))
   :menu-entry
-  '(?C "Exporter to  ModernCV"
+  '(?C "Export to ModernCV"
        ((?L "As LaTeX buffer" cv-export-as-latex)
 	(?l "As LaTeX file" cv-export-to-latex)
 	(?p "As PDF file" cv-export-to-pdf)
