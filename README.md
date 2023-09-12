@@ -1,19 +1,19 @@
-- [[org-cv](https://github.com/haoxiangliew/org-cv)](#org7f259a7)
-  - [Changes](#org1a8fb54)
-  - [Installation](#org8359fbc)
-  - [Usage](#org74cf23a)
-    - [Configuration](#org52ad789)
+- [[org-cv](https://github.com/haoxiangliew/org-cv)](#org7f7ddbe)
+  - [Changes](#orga7dabfb)
+  - [Installation](#org0adafae)
+  - [Usage](#org9295a65)
+    - [Configuration](#org9ac2699)
 
 
 
-<a id="org7f259a7"></a>
+<a id="org7f7ddbe"></a>
 
 # [org-cv](https://github.com/haoxiangliew/org-cv)
 
 -   Follows upstream at <https://gitlab.com/Titan-C/org-cv>
 
 
-<a id="org1a8fb54"></a>
+<a id="orga7dabfb"></a>
 
 ## Changes
 
@@ -21,7 +21,7 @@
 -   Removed everything other than `ox-moderncv`
 
 
-<a id="org8359fbc"></a>
+<a id="org0adafae"></a>
 
 ## Installation
 
@@ -32,7 +32,7 @@
 ```
 
 
-<a id="org74cf23a"></a>
+<a id="org9295a65"></a>
 
 ## Usage
 
@@ -101,9 +101,11 @@ When exporting you can call the following to get the latex file, or use `C-c C-e
 ```
 
 
-<a id="org52ad789"></a>
+<a id="org9ac2699"></a>
 
 ### Configuration
+
+Configure `moderncv` by adding the following to the top of the `.org` file
 
 ```org
 # CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'

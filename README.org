@@ -81,6 +81,7 @@ When exporting you can call the following to get the latex file, or use ~C-c C-e
 #+END_SRC
 
 *** Configuration
+Configure ~moderncv~ by adding the following to the top of the ~.org~ file
 #+BEGIN_SRC org
 # CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 ,#+CVSTYLE: banking
